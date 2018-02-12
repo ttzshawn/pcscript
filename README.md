@@ -27,4 +27,4 @@ npm run start
 
 # DEMO
 ## Demo
-![Show case](https://raw.githubusercontent.com/ttzshawn/screenshot.png)
+![Show case](https://raw.githubusercontent.com/ttzshawn/pcscript/master/assets/screenshot.png)
