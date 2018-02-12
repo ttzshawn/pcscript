@@ -58,6 +58,7 @@ const gen = async (petId, amount, validCode) => {
 }
 
 let pageNo = 0
+let min = 100000
 
 const getCheapestPet = async () => {
   pageNo = pageNo >= 5 ? 1 : pageNo + 1
@@ -78,16 +79,22 @@ const getCheapestPet = async () => {
     const pets = res.data.data.petsOnSale
 
     for (let i = 0; i < pets.length; i ++) {
-      const { petId, amount, validCode, rareDegree } = pets[i]
+      const { id, petId, amount, validCode, rareDegree } = pets[i]
       const order = config.orderList[rareDegree]
       if (order.isOrder) {
-        console.log(`${order.degree}: ${amount}`)
+        // 打印宠物价格
+        // console.log(`${order.degree}: ${amount}`)
+        // 打印宠物号
+        console.log(id)
       }
-      if (amount <= order.maxAmount) {
+      if (order.isOrder && amount <= order.maxAmount) {
         clearInterval(timmer)
         gen(petId, amount, validCode)
         break
       }
+      // if (petId === '') {
+      //   console.log(validCode)
+      // }
     }
   } catch (err) {
     // console.log('获取失败')

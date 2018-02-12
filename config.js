@@ -11,23 +11,23 @@ const cookie = ''
 const orderList = [{
   degree: '普通',
   isOrder: true,
-  maxAmount: 1200
+  maxAmount: 10
 }, {
   degree: '稀有',
-  isOrder: false,
-  maxAmount: 1900
+  isOrder: true,
+  maxAmount: 200
 }, {
   degree: '卓越',
   isOrder: true,
-  maxAmount: 2500
+  maxAmount: 300
 }, {
   degree: '史诗',
   isOrder: true,
-  maxAmount: 12000
+  maxAmount: 1800
 }, {
   degree: '神话',
   isOrder: true,
-  maxAmount: 20000
+  maxAmount: 67900
 }]
 
 module.exports = {
